@@ -22,24 +22,34 @@ A full-stack application built with a **Go** backend and **Next.js** frontend fo
 
 ## Getting Started
 
-### 1. Start the Backend (via Docker)
-The backend container handles all audio processing and FFmpeg dependencies.
+You can start both the backend and frontend simultaneously using the root development script.
+
+### Quick Start
 
 ```bash
-cd backend
-docker-compose up --build
-```
-The server will be available at `http://localhost:8080`.
-
-### 2. Start the Frontend
-The frontend proxies API requests to the backend container.
-
-```bash
-cd frontend
 bun install
-bun run dev
+bun dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+The application will be available at:
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:8080](http://localhost:8080)
+
+---
+
+### Individual Services
+
+If you need to start them separately:
+
+**Backend (Docker)**
+```bash
+bun run backend
+```
+
+**Frontend (Next.js)**
+```bash
+bun run frontend
+```
 
 ## API Usage
 
