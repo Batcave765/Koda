@@ -1,0 +1,10 @@
+{
+    "name": "koda-root",
+    "version": "1.0.0",
+    "description": "Root management for Koda (Music Analysis App)",
+    "scripts": {
+        "backend": "cd backend && docker-compose up --build",
+        "frontend": "cd frontend && bun run dev",
+        "dev": "bun run scripts/dev.ts"
+    }
+}
